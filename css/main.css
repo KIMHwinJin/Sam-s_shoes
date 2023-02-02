@@ -1,14 +1,13 @@
-/* 넓이 1440  콘텐츠 1200  */
-/* font-family: 'Montserrat', sans-serif; */
-/* 노토산스 400 레귤러 500미디움 700볼드 900엑스트라볼드 */
+/* width : 1320px */
+/* 양쪽 패딩 : 20px */
+/* 실제 컨텐츠 넓이 : 1280px */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Noto+Sans+KR:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;800&family=Poppins:wght@400;500;600&display=swap');
 
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-size: 16px;
 }
 
 ul {
@@ -20,331 +19,292 @@ a {
     color: inherit;
 }
 
-body {
-    font-family: 'Noto Sans KR', sans-serif;
+.btn {
+    width: 256px;
+    height: 64px;
+    border: 1px solid #111;
+    background-color: #fff;
+    color: #111;
+    text-align: center;
+    line-height: 64px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
-/* 헤더 */
-.header {
+.btn_dark {
+    background-color: #111;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn_full {
     width: 100%;
-    height: 80px;
-    background-color: #202b41;
 }
 
-.header .center_box {
-    display: flex;
-    width: 1200px;
+body {
+    font-family: 'Poppins', sans-serif;
+    /* font-family: 'Montserrat', sans-serif; */
+    font-size: 16px;
+    color: #111;
+}
+
+.container {
+}
+
+.inner {
+    width: 1320px;
+    padding: 0 20px;
     margin: 0 auto;
 }
 
-.header .logo {
-    margin-right: 400px;
+.header {
+    height: 120px;
 }
 
-.header .logo img {
-    width: 60px;
-    height: 60px;
-    display: block;
-    margin-top: 11px;
-}
-
-.header .nav {
-    width: 1200px;
-    height: 80px;
-    margin: 0 auto;
+.header .inner {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    color: #fff;
 }
 
-.header .nav li {
-    font-weight: 500;
+.header li a {
+    height: 120px;
+    display: inline-block;
+    line-height: 120px;
 }
-/* 헤더 끝 */
 
-/* 메인 */
-.main {
-    width: 100%;
-    height: 700px;
-    margin: 0 auto;
-    background-image: url('../images/main_bg.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.nav {
+    display: flex;
+}
+
+.nav li a {
+    margin-right: 30px;
+}
+
+.top_menu {
+    display: flex;
+}
+
+.top_menu li a {
+    margin-left: 40px;
+}
+
+.logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* hero */
+.slide {
     position: relative;
+    width: 1280px;
+    height: 728px;
+    margin: 0 auto;
+    background-image: url('../images/main_visual.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.slide .text_box {
+    position: absolute;
+    bottom: 100px;
+    left: 0;
+}
+
+.slide .text_box a {
+    cursor: pointer;
+}
+
+.slide .text_box h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    color: #000;
+    letter-spacing: -1.6px;
+    line-height: 1;
+}
+
+.slide .text_box p {
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 18px;
+    line-height: 28px;
+}
+
+/* banner */
+.banner ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner ul li {
+    width: 632px;
+    height: 642px;
+    background-color: #111;
+    color: #fff;
+    position: relative;
+}
+
+.banner li h2 {
+    font-weight: 800;
+    font-size: 40px;
+    position: absolute;
+    top: 50px;
+    left: 48px;
+}
+
+.banner ul li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 500;
+    font-size: 30px;
+    position: absolute;
+    left: 48px;
+    bottom: 36px;
+}
+
+/* product */
+.product {
+    margin-top: 130px;
+}
+
+.product h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 26px;
+}
+
+.product ul {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.product ul::after {
+    content: '';
+    position: absolute;
+    background-color: #c4c4c4;
+    width: 100%;
+    height: 7px;
+    bottom: 0;
+}
+
+.product ul li {
+    width: 305px;
+    padding-bottom: 63px;
+    position: relative;
+}
+
+.product ul li::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 7px;
+    background-color: #111;
+    bottom: 0;
+    z-index: 1;
+    transition: width 0.3s;
+}
+
+.product ul li:hover::after {
+    width: 100%;
+}
+
+.product .detail {
+    padding-top: 10px;
+    padding-left: 12px;
+}
+
+.product ul li .detail p.name {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.product ul li .detail p.price {
+    font-size: 18px;
+}
+
+/* .mailing */
+.mailing {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-/* .main h2 {
-    font-size: 40px;
-    font-weight: 700;
-    color: #202b41;
-    padding-top: 220px;
-    text-align: center;
-}
-
-.main p {
-    text-align: center;
-    margin-top: 50px;
-    font-size: 24px;
-    font-weight: 400px;
-    color: rgb(189, 184, 184);
-} */
-/* 메인 끝 */
-
-/* 메인 텍스트 효과 */
-.typing-txt {
-    display: none;
-}
-ul {
-    list-style: none;
-}
-
-.typing {
-    position: absolute;
-    text-align: center;
-    width: 612px;
-    height: 198px;
-}
-
-.typing li {
-    text-align: center;
-    font-size: 24px;
-    font-weight: 400px;
-    color: rgb(189, 184, 184);
-}
-
-.typing li:nth-child(2) {
-    margin-top: 40px;
-}
-
-.typing li:first-child {
-    font-size: 34px;
-    font-weight: 700;
-    color: #202b41;
-    text-align: center;
-}
-.typing ul li.on {
-    display: inline-block;
-    animation-name: cursor;
-    animation-duration: 0.3s;
-    animation-iteration-count: infinite;
-}
-@keyframes cursor {
-    0% {
-        border-right: 1px solid #fff;
-    }
-    50% {
-        border-right: 1px solid #000;
-    }
-    100% {
-        border-right: 1px solid #fff;
-    }
-}
-/* UI/UX */
-.uiux {
-    width: 100%;
-    height: 600px;
-    background-color: #f5f1e6;
-}
-
-.uiux .contents {
-    width: 1200px;
+.mailing .text_box {
     margin: 0 auto;
-    padding-top: 50px;
+    padding: 150px;
+    text-align: center;
 }
 
-.uiux .contents h2 {
+.mailing .text_box h2 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 800;
-    padding-bottom: 40px;
     font-size: 40px;
+    line-height: 1;
 }
 
-.uiux .contents .slide_01 {
-    display: flex;
-    justify-content: space-between;
-    width: 1200px;
-}
-
-.uiux .contents .slide_01 div {
-}
-
-.uiux .contents .slide_01 .pa {
-}
-
-.uiux .contents .slide_01 div a img {
-    width: 321px;
-    height: 222px;
-}
-
-.uiux .contents .slide_01 div a h3 {
-    font-size: 24px;
-    font-weight: 700;
-    padding-top: 18px;
-}
-
-.uiux .contents .slide_01 div a p {
-    font-size: 14px;
-    font-weight: 400;
-    padding-top: 6px;
-}
-
-.uiux .slick-dots {
-    bottom: -90px;
-}
-
-.uiux .slick-slide {
-    width: 430px;
-}
-
-/* 슬라이드 버튼 필요 */
-/* uiux끝 */
-
-/* Publishing */
-.publishing {
-    width: 1200px;
-    height: 690px;
-    margin: 0 auto;
-}
-
-.publishing ul {
-    display: flex;
-    justify-content: space-between;
-}
-
-.publishing h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    padding-bottom: 40px;
-    font-size: 40px;
-    padding-top: 56px;
-    padding-bottom: 50px;
-}
-
-.publishing ul li a img {
-    width: 580px;
-    height: 310px;
-}
-
-.publishing .shoe {
-    border: 1px solid rgba(0, 0, 0, 0.12);
-    border-radius: 10px;
-}
-
-.publishing ul li a h3 {
-    font-size: 24px;
-    font-weight: 700;
-    padding-top: 18px;
-}
-
-.publishing ul li a p {
-    font-size: 14px;
-    font-weight: 400;
-    padding-top: 6px;
-}
-
-/* 슬라이드 버튼 필요 */
-/* publishing끝 */
-
-/* 그래픽디자인  */
-.graphicdesign {
-    width: 100%;
-    height: 604px;
-    background-color: #f5f1e6;
-}
-
-.graphicdesign .contents {
-    width: 1200px;
-    margin: 0 auto;
-    padding-top: 50px;
-}
-
-.graphicdesign .contents h2 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 800;
-    padding-bottom: 40px;
-    font-size: 40px;
-}
-
-.graphicdesign .contents .slide_02 {
-    display: flex;
-    justify-content: space-between;
-}
-
-.graphicdesign .contents .slide_02 div a img {
-    width: 318px;
-    height: 222px;
-}
-
-.graphicdesign .contents .slide_02 div a h3 {
-    font-size: 24px;
-    font-weight: 700;
-    padding-top: 18px;
-}
-
-.graphicdesign .contents .slide_02 div a p {
-    font-size: 14px;
-    font-weight: 400;
-    padding-top: 6px;
-}
-
-.graphicdesign .slick-dots {
-    bottom: -90px;
-}
-
-.graphicdesign .slick-slide {
-    width: 430px;
-}
-
-/* 그래픽디자인 끝 */
-
-.border {
-    border: 1px solid #e9e9ec;
+.mailing .text_box p {
+    font-size: 18px;
+    line-height: 28px;
+    margin-top: 12px;
+    margin-bottom: 28px;
 }
 
 /* footer */
 .footer {
-    width: 1200px;
-    height: 160px;
-    margin: 0 auto;
+    background-color: #111;
+    color: #fff;
+    padding-top: 106px;
+    padding-bottom: 50px;
 }
 
-.footer p {
-    font-size: 16px;
-    font-weight: 400;
-    color: #ccc9c9;
-    text-align: center;
-    padding-top: 52px;
-}
-
-.footer ul {
+.footer .inner .menu {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10px;
+    justify-content: space-between;
 }
 
-.footer ul .mid_icon {
-    padding: 0 40px;
+.footer .inner .footer_menu {
+    display: flex;
 }
 
-/* gotop */
-.gotop {
-    position: fixed;
-    right: 30px;
-    bottom: 30px;
-    width: 60px;
-    height: 60px;
-    line-height: 60px;
-    text-align: center;
-    font-size: 26px;
-    background-color: #fff;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.12);
-    cursor: pointer;
-    display: none;
-    z-index: 99;
+.footer .inner .footer_menu li {
+    width: 216px;
+}
+
+.footer .inner .footer_menu > li > a,
+.footer .inner .footer_sns p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.25);
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.footer .inner .footer_sns ul {
+    display: flex;
+}
+
+.footer .inner .footer_sns ul li {
+    margin-right: 16px;
+}
+
+.footer .inner .copyright {
+    margin-top: 110px;
+}
+
+.footer .inner .footer_menu ul a {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.copyright {
+    margin-top: 110px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.5);
 }
